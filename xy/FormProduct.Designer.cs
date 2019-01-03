@@ -29,41 +29,43 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.AEC_IlluminationDataSet = new xy.AEC_IlluminationDataSet();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.GetProductsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.AEC_IlluminationDataSet = new xy.AEC_IlluminationDataSet();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.GetProductsTableAdapter = new xy.AEC_IlluminationDataSetTableAdapters.GetProductsTableAdapter();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.buttonSearch = new System.Windows.Forms.Button();
             this.comboBoxCat = new System.Windows.Forms.ComboBox();
             this.comboBoxSubCat = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.AEC_IlluminationDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GetProductsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AEC_IlluminationDataSet)).BeginInit();
             this.SuspendLayout();
             // 
-            // reportViewer1
+            // GetProductsBindingSource
             // 
-            reportDataSource3.Name = "DataSetGetProd";
-            reportDataSource3.Value = this.GetProductsBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "xy.ReportProduct.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(12, 67);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1752, 995);
-            this.reportViewer1.TabIndex = 0;
-            this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
+            this.GetProductsBindingSource.DataMember = "GetProducts";
+            this.GetProductsBindingSource.DataSource = this.AEC_IlluminationDataSet;
             // 
             // AEC_IlluminationDataSet
             // 
             this.AEC_IlluminationDataSet.DataSetName = "AEC_IlluminationDataSet";
             this.AEC_IlluminationDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // GetProductsBindingSource
+            // reportViewer1
             // 
-            this.GetProductsBindingSource.DataMember = "GetProducts";
-            this.GetProductsBindingSource.DataSource = this.AEC_IlluminationDataSet;
+            this.reportViewer1.AutoScroll = true;
+            this.reportViewer1.AutoSize = true;
+            reportDataSource1.Name = "DataSetGetProd";
+            reportDataSource1.Value = this.GetProductsBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "xy.ReportProduct.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(12, 67);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(1948, 995);
+            this.reportViewer1.TabIndex = 0;
+            this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
             // GetProductsTableAdapter
             // 
@@ -105,7 +107,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1776, 1036);
+            this.ClientSize = new System.Drawing.Size(1924, 1036);
             this.Controls.Add(this.comboBoxSubCat);
             this.Controls.Add(this.comboBoxCat);
             this.Controls.Add(this.buttonSearch);
@@ -114,8 +116,8 @@
             this.Name = "FormProduct";
             this.Text = "FormProduct";
             this.Load += new System.EventHandler(this.FormProduct_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.AEC_IlluminationDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GetProductsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AEC_IlluminationDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
