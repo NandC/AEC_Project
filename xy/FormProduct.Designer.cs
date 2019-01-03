@@ -38,6 +38,8 @@
             this.buttonSearch = new System.Windows.Forms.Button();
             this.comboBoxCat = new System.Windows.Forms.ComboBox();
             this.comboBoxSubCat = new System.Windows.Forms.ComboBox();
+            this.labelCat = new System.Windows.Forms.Label();
+            this.labelSubCat = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.GetProductsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AEC_IlluminationDataSet)).BeginInit();
             this.SuspendLayout();
@@ -80,7 +82,7 @@
             // 
             // buttonSearch
             // 
-            this.buttonSearch.Location = new System.Drawing.Point(714, -4);
+            this.buttonSearch.Location = new System.Drawing.Point(840, -4);
             this.buttonSearch.Name = "buttonSearch";
             this.buttonSearch.Size = new System.Drawing.Size(145, 43);
             this.buttonSearch.TabIndex = 4;
@@ -90,7 +92,7 @@
             // comboBoxCat
             // 
             this.comboBoxCat.FormattingEnabled = true;
-            this.comboBoxCat.Location = new System.Drawing.Point(88, 9);
+            this.comboBoxCat.Location = new System.Drawing.Point(158, 7);
             this.comboBoxCat.Name = "comboBoxCat";
             this.comboBoxCat.Size = new System.Drawing.Size(252, 32);
             this.comboBoxCat.TabIndex = 5;
@@ -98,16 +100,36 @@
             // comboBoxSubCat
             // 
             this.comboBoxSubCat.FormattingEnabled = true;
-            this.comboBoxSubCat.Location = new System.Drawing.Point(435, 7);
+            this.comboBoxSubCat.Location = new System.Drawing.Point(561, 7);
             this.comboBoxSubCat.Name = "comboBoxSubCat";
             this.comboBoxSubCat.Size = new System.Drawing.Size(240, 32);
             this.comboBoxSubCat.TabIndex = 6;
+            // 
+            // labelCat
+            // 
+            this.labelCat.AutoSize = true;
+            this.labelCat.Location = new System.Drawing.Point(60, 9);
+            this.labelCat.Name = "labelCat";
+            this.labelCat.Size = new System.Drawing.Size(92, 25);
+            this.labelCat.TabIndex = 7;
+            this.labelCat.Text = "Category";
+            // 
+            // labelSubCat
+            // 
+            this.labelSubCat.AutoSize = true;
+            this.labelSubCat.Location = new System.Drawing.Point(427, 10);
+            this.labelSubCat.Name = "labelSubCat";
+            this.labelSubCat.Size = new System.Drawing.Size(128, 25);
+            this.labelSubCat.TabIndex = 8;
+            this.labelSubCat.Text = "SubCategory";
             // 
             // FormProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1924, 1036);
+            this.Controls.Add(this.labelSubCat);
+            this.Controls.Add(this.labelCat);
             this.Controls.Add(this.comboBoxSubCat);
             this.Controls.Add(this.comboBoxCat);
             this.Controls.Add(this.buttonSearch);
@@ -133,5 +155,7 @@
         private System.Windows.Forms.Button buttonSearch;
         private System.Windows.Forms.ComboBox comboBoxCat;
         private System.Windows.Forms.ComboBox comboBoxSubCat;
+        private System.Windows.Forms.Label labelCat;
+        private System.Windows.Forms.Label labelSubCat;
     }
 }
