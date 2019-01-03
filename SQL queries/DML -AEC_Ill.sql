@@ -1,0 +1,201 @@
+
+-----------------------------
+--INSERT INTO Product (
+--	Fixture_Name,
+--	Name,
+--	Full_Name,
+--	LED_Type,
+--	OPTICAL_SYSTEM,
+--	Lumen,
+--	CCT,
+--	N_OF_MODULES_INSTALLED,
+--	mA,
+--	NOMINAL_POWER,
+--	Class,
+--	Mounting,
+--	Price_F,
+--	Price_DA,
+--	Price_PLM,
+--	Category,
+--	CreatedBy,
+--	CreatedOn  )
+--SELECT 
+--	   [Fixture Name]
+--      ,[Name]
+--      ,[Full Name]
+--      ,[LED - Type]
+--      ,[OPTICAL SYSTEM]
+--      ,[Lumen]
+--      ,[CCT]
+--      ,[N° OF MODULES INSTALLED]
+--      ,[mA]
+--      ,[NOMINAL POWER]
+--      ,[CL]
+--      ,[Mounting]
+--      ,[F]
+--      ,[DA]
+--      ,[PLM],
+--	  'STREET_URBAN LIGHTING_FLOODLIGHT',
+--	  'Data Extraction', 
+--	   getdate()
+--  FROM [dbo].[R_ItaloBasicList$]
+----------------------------------------
+--INSERT INTO Product (
+--	Fixture_Name,
+--	Name,
+--	Full_Name,
+--	LED_Type,
+--	OPTICAL_SYSTEM,
+--	Lumen,
+--	CCT,
+--	N_OF_MODULES_INSTALLED,
+--	mA,
+--	NOMINAL_POWER,
+--	Class,
+--	Mounting,
+--	Price_F,
+--	Price_DA,
+--	Price_PLM,
+--	Category,
+--	CreatedBy,
+--	CreatedOn  )
+--SELECT 
+--	   [Fixture Name]
+--      ,[Name]
+--      ,[Full Name]
+--      ,[LED - Type]
+--      ,[OPTICAL SYSTEM]
+--      ,[Lumen]
+--      ,[CCT]
+--      ,[N° OF MODULES INSTALLED]
+--      ,[mA]
+--      ,[NOMINAL POWER]
+--      ,[CL]
+--      ,[Mounting]
+--      ,[F]
+--      ,[DA]
+--      ,[PLM],
+--	  'STREET_URBAN LIGHTING_FLOODLIGHT',
+--	  'Data Extraction', 
+--	   getdate()
+--  FROM [dbo].[R_TunnelList$]
+
+-------------------------
+--INSERT INTO Product (
+--	Fixture_Name,
+--	Name,
+--	Full_Name,
+--	LED_Type,
+--	OPTICAL_SYSTEM,
+--	Lumen,
+--	CCT,
+--	N_OF_MODULES_INSTALLED,
+--	mA,
+--	NOMINAL_POWER,
+--	Class,
+--	Mounting,
+--	Price_F,
+--	Price_DA,
+--	Price_PLM,
+--	Category,
+--	CreatedBy,
+--	CreatedOn  )
+--SELECT 
+--	   [Fixture Name]
+--      ,[Name]
+--      ,[Full Name]
+--      ,[LED - Type]
+--      ,[OPTICAL SYSTEM]
+--      ,[Lumen]
+--      ,[CCT]
+--      ,[N° OF MODULES INSTALLED]
+--      ,[mA]
+--      ,[NOMINAL POWER]
+--      ,[CL]
+--      ,[Mounting]
+--      ,[F]
+--      ,[DA]
+--      ,[PLM],
+--	  'STREET_URBAN LIGHTING_FLOODLIGHT',
+--	  'Data Extraction', 
+--	   getdate()
+--  FROM [dbo].[R_IndoorList$]
+
+----------------
+--INSERT INTO Product (
+--	Fixture_Name,
+--	Name,
+--	Full_Name,
+--	LED_Type,
+--	OPTICAL_SYSTEM,
+--	Lumen,
+--	CCT,
+--	N_OF_MODULES_INSTALLED,
+--	mA,
+--	NOMINAL_POWER,
+--	Class,
+--	Mounting,
+--	Price_F,
+--	Price_DA,
+--	Price_PLM,
+--	Category,
+--	CreatedBy,
+--	CreatedOn  )
+--SELECT 
+--	   [Fixture Name]
+--      ,[Name]
+--      ,[Full Name]
+--      ,[LED - Type]
+--      ,[OPTICAL SYSTEM]
+--      ,[Lumen]
+--      ,[CCT]
+--      ,[N° OF MODULES INSTALLED]
+--      ,[mA]
+--      ,[NOMINAL POWER]
+--      ,[CL]
+--      ,[Mounting]
+--      ,[F]
+--      ,[DA]
+--      ,[PLM],
+--	  'STREET_URBAN LIGHTING_FLOODLIGHT',
+--	  'Data Extraction', 
+--	   getdate()
+--  FROM [dbo].[R_SLList$]
+
+
+
+
+--SELECT * FROM SYSCOLUMNS WHERE ID = OBJECT_ID('Product');
+
+--CREATE TABLE [dbo].[Product](
+--	[Id] [int] IDENTITY(1,1) NOT NULL,
+--	[Fixture_Name] [nvarchar](255) NULL,
+--	[Name] [nvarchar](255) NULL,
+--	[Full_Name] [nvarchar](255) NULL,
+--	[LED_Type] [nvarchar](255) NULL,
+--	[OPTICAL_SYSTEM] [nvarchar](255) NULL,
+--	[Lumen] [nvarchar](255) NULL,
+--	[CCT] [nvarchar](255) NULL,
+--	[N_OF_MODULES_INSTALLED] [float] NULL,
+--	[mA] [float] NULL,
+--	[NOMINAL_POWER] [nvarchar](255) NULL,
+--	[Class] [nvarchar](255) NULL,
+--	[Mounting] [nvarchar](255) NULL,
+--	[Price_F] [float] NULL,
+--	[Price_DA] [float] NULL,
+--	[Price_PLM] [float] NULL,
+--	[Category] [nvarchar](50) NOT NULL,
+--	[CreatedOn] [datetime] NOT NULL,
+--	[CreatedBy] [nvarchar](50) NOT NULL,
+--	[UpdatedOn] [datetime] NULL,
+--	[Updatedby] [nvarchar](50) NULL,
+--	row_version rowversion
+--) ON [PRIMARY]
+--GO
+
+
+----INSERT INTO [SubCategory]
+----SELECT * FROM [zOldAEC].[dbo].[SubCategory]
+
+----INSERT INTO [dbo].[Category]
+----SELECT * fROM [zOldAEC].[dbo].[Category]

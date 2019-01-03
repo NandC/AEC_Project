@@ -1695,10 +1695,12 @@
                 </TablixMember>
               </TablixMembers>
             </TablixRowHierarchy>
+            <RepeatColumnHeaders>true</RepeatColumnHeaders>
             <RepeatRowHeaders>true</RepeatRowHeaders>
+            <FixedColumnHeaders>true</FixedColumnHeaders>
             <FixedRowHeaders>true</FixedRowHeaders>
             <DataSetName>DataSetGetProd</DataSetName>
-            <Top>0.55556in</Top>
+            <Top>0.0119in</Top>
             <Height>0.75in</Height>
             <Width>11.50595in</Width>
             <Style>
@@ -1708,7 +1710,7 @@
             </Style>
           </Tablix>
         </ReportItems>
-        <Height>2.06175in</Height>
+        <Height>0.78794in</Height>
         <Style />
       </Body>
       <Width>13.32143in</Width>

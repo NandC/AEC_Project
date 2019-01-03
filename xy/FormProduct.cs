@@ -30,7 +30,7 @@ namespace xy
             ps.PaperSize.RawKind = (int)System.Drawing.Printing.PaperKind.A4;
             reportViewer1.SetPageSettings(ps);
             //reportViewer1.SizeToReportContent = true;
-
+            
             AEC_IlluminationDataSet.EnforceConstraints = false;
 
             // TODO: This line of code loads data into the 'AEC_IlluminationDataSet.GetProducts' table. You can move, or remove it, as needed.

@@ -1,0 +1,529 @@
+
+
+--INSERT INTO  [SubCategory] (SubCategory, Category)
+--SELECT [SubCategory],[Category] FROM [dbo].[R_Relamping]
+--GO
+
+--INSERT INTO  [SubCategory] (SubCategory, Category)
+--SELECT [POLES], 'POLES' FROM [dbo].[R_POLES$]
+--GO
+--INSERT INTO  [SubCategory] (SubCategory, Category)	VALUES
+--('GALILEO 1 TUNNEL', 'TUNNEL')
+--INSERT INTO  [SubCategory] (SubCategory, Category)	VALUES
+--('GALILEO 1 TUNNEL EB', 'TUNNEL')
+--INSERT INTO  [SubCategory] (SubCategory, Category)	VALUES
+--('GALILEO 2 TUNNEL EB', 'TUNNEL')
+--INSERT INTO  [SubCategory] (SubCategory, Category)	VALUES
+--('GALILEO 3 TUNNEL EB', 'TUNNEL')
+
+--SELECT *  FROM [AEC_Illumination].[dbo].[SubCategory]  WHERE Category = 'TUNNEL'
+--INSERT INTO  [SubCategory] (SubCategory, Category)
+--SELECT 'GALILEO IN	GQ1', 'INDOOR'
+--GO
+
+--INSERT INTO  [SubCategory] (SubCategory, Category)
+--SELECT 'GA', 'INDOOR'
+--GO
+--INSERT INTO  [SubCategory] (SubCategory, Category)
+--SELECT 'GH', 'INDOOR'
+--GO
+
+--INSERT INTO  [SubCategory] (SubCategory, Category)
+--SELECT 'ITALO 1 BASIC', 'ITALO BASIC'
+
+--INSERT INTO  [SubCategory] (SubCategory, Category)
+--SELECT 'ITALO 2 BASIC', 'ITALO BASIC'
+
+--INSERT INTO  [SubCategory] (SubCategory, Category) 
+--SELECT 'ITALO 3 BASIC', 'ITALO BASIC'
+
+--INSERT INTO Category 
+--SELECT * FROM (VALUES ('STREET_URBAN LIGHTING_FLOODLIGHT'),('INDOOR'),('TUNNEL'),('POLES'),		
+--	('POLE''S ACCESSORIES'),('RELAMPING'),('ITALO BASIC')
+--       ) t1 (c1)
+
+--INSERT INTO  [SubCategory]
+--SELECT TOP 1 * FROM R_SubCat$ WHERE F1 LIKE '%CILINDRO%' 
+
+--INSERT INTO  [SubCategory]
+--SELECT * FROM R_SubCat$ WHERE F1 NOT LIKE '%BRACKET%' AND F1 NOT LIKE '%CILINDRO%' 
+
+
+-------
+--CREATE TABLE [dbo].SubCategoryOptions (
+--	[Id] [int] IDENTITY(1,1) NOT NULL,
+--	[Name] [nvarchar](255) NULL,
+--	[Price] [money] NULL,
+--	[OptionType] [nvarchar](50) NOT NULL,
+--	[ProdSubCategory] [nvarchar](255) NULL FOREIGN KEY REFERENCES SubCategory (SubCategory),
+--	[Description] [nvarchar](max) NULL,
+--	[CreatedOn] [datetime] NOT NULL,
+--	[CreatedBy] [nvarchar](50) NOT NULL,
+--	[UpdatedOn] [datetime] NULL,
+--	[Updatedby] [nvarchar](50) NULL,
+--	[GroupOS] [nvarchar](50) NULL,
+--	[Group_mA] [nvarchar](50) NULL,
+--PRIMARY KEY CLUSTERED 
+--(
+--	[Id] ASC
+--)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+--) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+--GO
+
+----------------------
+--CREATE TABLE [dbo].[Product] (
+--	[Id] [int] IDENTITY(1,1) NOT NULL,
+--	[Name] [nvarchar](255) NULL,
+--	[LUMEN OUTPUT] [nvarchar](255) NULL,
+--	[T° K CRI 70] [nvarchar](255) NULL,
+--	[N° OF MODULES INSTALLED] [float] NULL,
+--	[mA] [float] NULL,
+--	[NOMINAL POWER] [nvarchar](255) NULL,
+--	[CLASS] [nvarchar](255) NULL,
+--	[Price "F"] [money] NULL,
+--	[Price "DA"] [money] NULL,
+--	[Price "PLM"] [money] NULL,
+--	[Category] [nvarchar](50) NOT NULL,
+--	[SubCategory] [nvarchar](50) NOT NULL,
+--	[GroupOS] [nvarchar](50) NULL,
+--	[Group_mA] [nvarchar](50) NULL,
+--	[Description] [nvarchar](max) NULL,
+--	[CreatedOn] [datetime] NOT NULL,
+--	[CreatedBy] [nvarchar](50) NOT NULL,
+--	[UpdatedOn] [datetime] NULL,
+--	[Updatedby] [nvarchar](50) NULL,
+-- CONSTRAINT [PRIMARYkEY_PRODUCT] PRIMARY KEY CLUSTERED 
+--(
+--	[Id] ASC
+--)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+--) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+--GO
+
+
+---------
+--CREATE TABLE [dbo].[ProductOptions] (
+--	[Id] [int] IDENTITY(1,1) NOT NULL,
+--	[Name] [nvarchar](255) NULL,
+--	[Price] [money] NULL,
+--	[Category] [nvarchar](50) NOT NULL,
+--	[SubCategory] [nvarchar](50) NULL,
+--	[Description] [nvarchar](max) NULL,
+--	[ProductId] [int] NOT NULL,
+--	[CreatedOn] [datetime] NOT NULL,
+--	[CreatedBy] [nvarchar](50) NOT NULL,
+--	[UpdatedOn] [datetime] NULL,
+--	[Updatedby] [nvarchar](50) NULL,
+--	[GroupOS] [nvarchar](50) NULL,
+--	[Group_mA] [nvarchar](50) NULL,
+--PRIMARY KEY CLUSTERED 
+--(
+--	[Id] ASC
+--)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+--) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+--GO
+
+--ALTER TABLE [dbo].[ProductOptions]  WITH CHECK ADD FOREIGN KEY([ProductId])
+--REFERENCES [dbo].[Product] ([Id])
+--GO
+
+---
+--SElECT * INTO zProd_Dec31 FROM Product
+---------------------------
+--ALTER TABLE [SubCategory] ADD Category nvarchar(255) null 
+--UPDATE [SubCategory] SET Category = 'STREET_URBAN LIGHTING_FLOODLIGHT'
+
+--ALTER TABLE [SubCategory] ADD CONSTRAINT fk_Category FOREIGN KEY (Category) REFERENCES Category (Category)
+
+----ITALO 2 STE-STW 769 
+--SELECT  *
+--FROM [dbo].['Street_urban lighting_floodligh$']
+--WHERE id > 765 
+
+--alter table ['Street_urban lighting_floodligh$'] add [Id] [int] IDENTITY(1,1) NOT NULL PRIMARY KEY
+--alter table ['Street_urban lighting_floodligh$'] add Status varchar(50) null
+--UPDATE [dbo].['Street_urban lighting_floodligh$'] SET sTATUS = 'Done' WHERE id < 765
+
+--TRUNCATE TABLE [dbo].['Street_urban lighting_floodligh$']
+--DROP TABLE [dbo].['Street_urban lighting_floodligh$']
+
+--SELECT  *
+--FROM [dbo].['Street_urban lighting_floodligh$']
+--WHERE id > 745 and id < 800 --Name = '2B' 765
+--order by 1 asc
+
+-------------- 6. ITALO 1 S05 - OPTIONS------------------
+--DECLARE @PID INT 
+
+--DECLARE db_cursor CURSOR FOR 
+--SELECT Id
+--FROM Product P
+--WHERE NAME LIKE '%S05%'
+--      AND SubCategory = 'ITALO 1'
+
+--OPEN db_cursor  
+--FETCH NEXT FROM db_cursor INTO @PID  
+
+--WHILE @@FETCH_STATUS = 0  
+--BEGIN  
+
+--	INSERT INTO ProductOptions (
+--		Name,
+--		Price,
+--		Category,
+--		--SubCategory,
+--		Description,
+--		ProductId,
+--		CreatedOn,
+--		CreatedBy )
+--	SELECT [Name]
+--		  ,[Price]
+--		  ,[Category]
+--		  ,[Description],
+--		  @PID,
+--		  GETDATE(),
+--		  'Data Extraction'
+--	  FROM [dbo].['6 ITALO 1 S05 - Options$']
+		
+--      FETCH NEXT FROM db_cursor INTO @PID 
+--END 
+
+--CLOSE db_cursor  
+--DEALLOCATE db_curso
+--
+--INSERT INTO ProductOptions (
+--	Name,
+--	Price,
+--	Category,
+--	SubCategory,
+--	Description,
+--	ProductId,
+--	CreatedOn,
+--	CreatedBy )
+--SELECT
+--	'NEMA 7PIN - EXTRA CHARGE TO BE APPLIED TO THE FIX  VERSION',
+--	71,
+--	'AVAILABLE OPTIONS',
+--	'',
+--	'',
+--	p.Id,
+--	GETDATE(),
+--	'Data Extraction'
+--FROM Product P
+--WHERE NAME LIKE '%S05%'
+--      AND SubCategory = 'ITALO 1'
+---
+
+--ALTER TABLE ProductOptions ADD
+--	GroupOS [nvarchar](50)  NULL
+
+--ALTER TABLE ProductOptions ADD
+--	Group_mA [nvarchar](50)  NULL
+
+--CREATE TABLE ProductOptions (
+--	  
+--	[Name] [nvarchar](255) NULL,
+--	[Price] [money] NULL,
+--	[Category] [nvarchar](50) NOT NULL,
+--	[SubCategory] [nvarchar](50)  NULL,
+--	[Description] [nvarchar](max) NULL,
+--	[ProductId] Int NOT NULL FOREIGN KEY REFERENCES Product (Id),
+--	[CreatedOn] [datetime] NOT NULL,
+--	[CreatedBy] [nvarchar](50) NOT NULL,
+--	[UpdatedOn] [datetime] NULL,
+--	[Updatedby] [nvarchar](50) NULL
+--	)
+---
+--UPDATE PRODUCT 
+--SET Description = 'Please Note: Lumen output and nominal power stated have to be considered as indicative values. For the latest updated values, kindly check the Luminarie''s Product Sheets published in our Web-Site'
+--WHERE NAME LIKE '%S05%' 
+        AND SubCategory = 'ITALO 1' --Category = ''
+
+-------------- 6. ITALO 1 S05 ------------------
+--INSERT INTO [Product] (
+--	[Name],
+--	[LUMEN OUTPUT],
+--	[T° K CRI 70],
+--	[N° OF MODULES INSTALLED],
+--	[mA],
+--	[NOMINAL POWER],
+--	[CLASS],
+--	[Price "F"],
+--	[Price "DA"],
+--	[Price "PLM"],
+--	[Category],
+--	[SubCategory],
+--	--[Description],
+--	--[Updatedby],
+--	--[UpdatedOn],
+--	[CreatedBy],
+--	[CreatedOn]
+--	)
+--SELECT 
+--	--A.NAME, t1.c1 ,
+--	CASE 
+--		WHEN t1.c1 = 1 THEN SUBSTRING(A.NAME, 0,(CHARINDEX('-', A.NAME)) ) + ' S05 ' + SUBSTRING(A.NAME, (CHARINDEX('-', A.NAME)+1),(LEN(A.NAME)-1))		
+--		--ELSE A.NAME
+--	END AS Product,
+--	CASE 
+--		WHEN t1.c1 = 1 THEN ["S05" LUMEN OUTPUT]
+--		--ELSE A.NAME
+--	END AS [LUMEN OUTPUT]
+--      ,[T° K                                  CRI 70]
+--      ,[N° OF MODULES INSTALLED]
+--      ,[mA]
+--      ,[NOMINAL POWER]
+--      ,[CLASS]
+--      ,["F"]
+--      ,["DA"]
+--      ,["PLM"]
+--	  ,'STREET_URBAN LIGHTING_FLOODLIGHT'
+--	  ,'ITALO 1'
+--	  ,'Data Extraction', getdate()
+--FROM (VALUES (1)
+--       ) t1 (c1), ['6 ITALO 1 S05$'] AS A
+--ORDER BY 1
+-------------- 5. ITALO 1 STA ------------------
+--INSERT INTO [Product] (
+--	[Name],
+--	[LUMEN OUTPUT],
+--	[T° K CRI 70],
+--	[N° OF MODULES INSTALLED],
+--	[mA],
+--	[NOMINAL POWER],
+--	[CLASS],
+--	[Price "F"],
+--	[Price "DA"],
+--	[Price "PLM"],
+--	[Category],
+--	[SubCategory],
+--	--[Description],
+--	--[Updatedby],
+--	--[UpdatedOn],
+--	[CreatedBy],
+--	[CreatedOn]
+--	)
+--SELECT 
+--	--A.NAME, t1.c1 ,
+--	CASE 
+--		WHEN t1.c1 = 1 THEN SUBSTRING(A.NAME, 0,(CHARINDEX('-', A.NAME)) ) + ' STA ' + SUBSTRING(A.NAME, (CHARINDEX('-', A.NAME)+1),(LEN(A.NAME)-1))		
+--		--ELSE A.NAME
+--	END AS Product,
+--	CASE 
+--		WHEN t1.c1 = 1 THEN [ "STA" LUMEN OUTPUT]
+--		--ELSE A.NAME
+--	END AS [LUMEN OUTPUT]
+--      ,[T° K CRI 70]
+--      ,[N° OF MODULES INSTALLED]
+--      ,[mA]
+--      ,[NOMINAL POWER]
+--      ,[CLASS]
+--      ,["F"]
+--      ,["DA"]
+--      ,["PLM"]
+--	  ,'STREET_URBAN LIGHTING_FLOODLIGHT'
+--	  ,'ITALO 1'
+--	  ,'Data Extraction', getdate()
+--FROM (VALUES (1)
+--       ) t1 (c1), ['5 ITALO 1 - STA$'] AS A
+--ORDER BY 1
+-------------- 4. ITALO 1 SV ------------------
+--INSERT INTO [Product] (
+--	[Name],
+--	[LUMEN OUTPUT],
+--	[T° K CRI 70],
+--	[N° OF MODULES INSTALLED],
+--	[mA],
+--	[NOMINAL POWER],
+--	[CLASS],
+--	[Price "F"],
+--	[Price "DA"],
+--	[Price "PLM"],
+--	[Category],
+--	[SubCategory],
+--	--[Description],
+--	--[Updatedby],
+--	--[UpdatedOn],
+--	[CreatedBy],
+--	[CreatedOn]
+--	)
+--SELECT 
+--	--A.NAME, t1.c1 ,
+--	CASE 
+--		WHEN t1.c1 = 1 THEN SUBSTRING(A.NAME, 0,(CHARINDEX('-', A.NAME)) ) + ' SV ' + SUBSTRING(A.NAME, (CHARINDEX('-', A.NAME)+1),(LEN(A.NAME)-1))		
+--		--ELSE A.NAME
+--	END AS Product,
+--	CASE 
+--		WHEN t1.c1 = 1 THEN [ "SV" LUMEN OUTPUT]
+--		--ELSE A.NAME
+--	END AS [LUMEN OUTPUT]
+--      ,[T° K                                  CRI 70]
+--      ,[N° OF MODULES INSTALLED]
+--      ,[mA]
+--      ,[NOMINAL POWER]
+--      ,[CLASS]
+--      ,["F"]
+--      ,["DA"]
+--      ,["PLM"]
+--	  ,'STREET_URBAN LIGHTING_FLOODLIGHT'
+--	  ,'ITALO 1'
+--	  ,'Data Extraction', getdate()
+--FROM (VALUES (1)
+--       ) t1 (c1), ['R4 ITALO 1 - SV$'] AS A
+--ORDER BY 
+--
+
+--- 3 ITALO 1 STU -----------------------------
+--INSERT INTO [Product] (
+--	[Name],
+--	[LUMEN OUTPUT],
+--	[T° K CRI 70],
+--	[N° OF MODULES INSTALLED],
+--	[mA],
+--	[NOMINAL POWER],
+--	[CLASS],
+--	[Price "F"],
+--	[Price "DA"],
+--	[Price "PLM"],
+--	[Category],
+--	[SubCategory],
+--	--[Description],
+--	--[Updatedby],
+--	--[UpdatedOn],
+--	[CreatedBy],
+--	[CreatedOn]
+--	)
+--SELECT 
+--	--A.NAME, t1.c1 ,
+--	CASE 
+--		WHEN t1.c1 = 1 THEN SUBSTRING(A.NAME, 0,(CHARINDEX('-', A.NAME)) ) + ' STU-M ' + SUBSTRING(A.NAME, (CHARINDEX('-', A.NAME)+1),(LEN(A.NAME)-1))
+--		WHEN t1.c1 = 2 THEN SUBSTRING(A.NAME, 0,(CHARINDEX('-', A.NAME)) ) + ' STU-S ' + SUBSTRING(A.NAME, (CHARINDEX('-', A.NAME)+1),(LEN(A.NAME)-1))
+--		--ELSE A.NAME
+--	END AS Product,
+--	CASE 
+--		WHEN t1.c1 = 1 THEN [ "STU-M" LUMEN OUTPUT]
+--		WHEN t1.c1 = 2 THEN [ "STU-S" LUMEN OUTPUT]
+--		--ELSE A.NAME
+--	END AS [LUMEN OUTPUT]
+--      ,[T° K                                         CRI 70]
+--      ,[N° OF MODULES INSTALLED]
+--      ,[mA]
+--      ,[NOMINAL POWER]
+--      ,[CLASS]
+--      ,["F"]
+--      ,["DA"]
+--      ,["PLM"]
+--	  ,'STREET_URBAN LIGHTING_FLOODLIGHT'
+--	  ,'ITALO 1'
+--	  ,'Data Extraction', getdate()
+--FROM (VALUES (1), (2)
+--       ) t1 (c1), ['R3_ITALO 1 STU$'] AS A
+--ORDER BY 
+--	1
+---------- 2. 'R_ITALO 1 OPDX-OPSX$'--------------------------------
+--INSERT INTO [Product] (
+--	[Name],
+--	[LUMEN OUTPUT],
+--	[T° K CRI 70],
+--	[N° OF MODULES INSTALLED],
+--	[mA],
+--	[NOMINAL POWER],
+--	[CLASS],
+--	[Price "F"],
+--	[Price "DA"],
+--	[Price "PLM"],
+--	[Category],
+--	[SubCategory],
+--	[Description],
+--	[Updatedby],
+--	[UpdatedOn],
+--	[CreatedBy],
+--	[CreatedOn],[GroupOS] ,[Group_mA]
+--	)
+
+--SELECT 
+--	A.NAME, t1.c1 ,
+--	CASE 
+--		WHEN t1.c1 = 1 THEN SUBSTRING(A.NAME, 0,16) + ' OPDX ' + SUBSTRING(A.NAME, 17,(LEN(A.NAME)-1))
+--		WHEN t1.c1 = 2 THEN SUBSTRING(A.NAME, 0,16) + ' OPSX ' + SUBSTRING(A.NAME, 17,(LEN(A.NAME)-1))
+
+--		WHEN t1.c1 = 1 THEN SUBSTRING(A.NAME, 0,(CHARINDEX('-', A.NAME)) ) + ' OPDX ' + SUBSTRING(A.NAME, (CHARINDEX('-', A.NAME)+1),(LEN(A.NAME)-1))
+--		WHEN t1.c1 = 2 THEN SUBSTRING(A.NAME, 0,(CHARINDEX('-', A.NAME)) ) + ' OPSX ' + SUBSTRING(A.NAME, (CHARINDEX('-', A.NAME)+1),(LEN(A.NAME)-1))
+--		ELSE A.NAME
+--	END AS Product,
+--	CASE 
+--		WHEN t1.c1 = 1 THEN [ "OPDX"  LUMEN OUTPUT]
+--		WHEN t1.c1 = 2 THEN [ "OPSX"  LUMEN OUTPUT]
+--		ELSE A.NAME
+--	END AS [LUMEN OUTPUT]
+--      ,[T° K               CRI 70]
+--      ,[N° OF MODULES INSTALLED]
+--      ,[mA]
+--      ,[NOMINAL POWER]
+--      ,[CLASS]
+--      ,["F"]
+--      ,["DA"]
+--      ,["PLM"]
+--	  ,'STREET_URBAN LIGHTING_FLOODLIGHT'
+--	  ,'ITALO 1'
+--	  ,'Data Extraction', getdate(),[GroupOS] ,[Group_mA]
+--FROM (VALUES (1), (2)
+--       ) t1 (c1), ['R2_ITALO 1 OPDX-OPSX$'] AS A
+--ORDER BY 
+--	A.NAME
+
+-----------------
+
+---------- 1. 'R1_ITALO STE STW$' 1 --------------------------------
+--INSERT INTO [Product] (
+--	[Name],
+--	[LUMEN OUTPUT],
+--	[T° K CRI 70],
+--	[N° OF MODULES INSTALLED],
+--	[mA],
+--	[NOMINAL POWER],
+--	[CLASS],
+--	[Price "F"],
+--	[Price "DA"],
+--	[Price "PLM"],
+--	[Category],
+--	[SubCategory],
+--	--[Description],
+--	--[Updatedby],
+--	--[UpdatedOn],
+--	[CreatedBy],
+--	[CreatedOn],[GroupOS] ,[Group_mA]
+--	)
+--SELECT 
+--	--A.NAME, t1.c1 ,
+--	CASE 
+--		--WHEN t1.c1 = 1 THEN SUBSTRING(A.NAME, 0,17) + ' STE-M ' + SUBSTRING(A.NAME, 18,(LEN(A.NAME)-1))
+--		--WHEN t1.c1 = 2 THEN SUBSTRING(A.NAME, 0,17) + ' STE-S ' + SUBSTRING(A.NAME, 18,(LEN(A.NAME)-1))
+--		--WHEN t1.c1 = 3 THEN SUBSTRING(A.NAME, 0,17) + ' STW '   + SUBSTRING(A.NAME, 18,(LEN(A.NAME)-1))
+
+--		WHEN t1.c1 = 1 THEN SUBSTRING(A.NAME, 0,(CHARINDEX('-', A.NAME)) ) + ' STE-M ' + SUBSTRING(A.NAME, (CHARINDEX('-', A.NAME)+1),(LEN(A.NAME)-1))
+--		WHEN t1.c1 = 2 THEN SUBSTRING(A.NAME, 0,(CHARINDEX('-', A.NAME)) ) + ' STE-S ' + SUBSTRING(A.NAME, (CHARINDEX('-', A.NAME)+1),(LEN(A.NAME)-1))
+--		WHEN t1.c1 = 3 THEN SUBSTRING(A.NAME, 0,(CHARINDEX('-', A.NAME)) ) + ' STW '   + SUBSTRING(A.NAME, (CHARINDEX('-', A.NAME)+1),(LEN(A.NAME)-1))
+
+--		--ELSE A.NAME
+--	END AS Product,
+--	CASE 
+--		WHEN t1.c1 = 1 THEN [STE-M LUMEN OUTPUT]
+--		WHEN t1.c1 = 2 THEN [STE-S LUMEN OUTPUT]
+--		WHEN t1.c1 = 3 THEN [STW LUMEN OUTPUT]
+--		--ELSE A.NAME
+--	END AS [LUMEN OUTPUT]
+--      ,[T° K CRI 70]
+--      ,[N° OF MODULES INSTALLED]
+--      ,[mA]
+--      ,[NOMINAL POWER]
+--      ,[CLASS]
+--      ,[Price "F"]
+--      ,[Price "DA"]
+--      ,[Price "PLM"] 
+--	  ,'STREET_URBAN LIGHTING_FLOODLIGHT'
+--	  ,'ITALO 1'
+--	  ,'Data Extraction', getdate(),[GroupOS] ,[Group_mA]
+--FROM (VALUES (1), (2), (3)
+--       ) t1 (c1), ['R1_ITALO STE STW$'] AS A
+--ORDER BY 
+--	A.NAME
