@@ -41,6 +41,32 @@ FROM [AEC_Illumination].[dbo].[SubCategory]
 --) ON [PRIMARY]
 GO
 
+--CREATE TABLE [dbo].[Product](
+--	[Id] [int] IDENTITY(1,1) NOT NULL,
+--	[Fixture_Name] [nvarchar](255) NULL,
+--	[Name] [nvarchar](255) NULL,
+--	[Full_Name] [nvarchar](255) NULL,
+--	[LED_Type] [nvarchar](255) NULL,
+--	[OPTICAL_SYSTEM] [nvarchar](255) NULL,
+--	[Lumen] [nvarchar](255) NULL,
+--	[CCT] [nvarchar](255) NULL,
+--	[N_OF_MODULES_INSTALLED] [float] NULL,
+--	[mA] [float] NULL,
+--	[NOMINAL_POWER] [nvarchar](255) NULL,
+--	[Class] [nvarchar](255) NULL,
+--	[Mounting] [nvarchar](255) NULL,
+--	[Price_F] [float] NULL,
+--	[Price_DA] [float] NULL,
+--	[Price_PLM] [float] NULL,
+--	[Category] [nvarchar](50) NOT NULL,
+--	[CreatedOn] [datetime] NOT NULL,
+--	[CreatedBy] [nvarchar](50) NOT NULL,
+--	[UpdatedOn] [datetime] NULL,
+--	[Updatedby] [nvarchar](50) NULL,
+--	row_version rowversion
+--) ON [PRIMARY]
+--GO
+
 
 --INSERT INTO [SubCategory]
 --SELECT * FROM [zOldAEC].[dbo].[SubCategory]
