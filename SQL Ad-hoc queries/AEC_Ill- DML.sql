@@ -1,5 +1,16 @@
 
-
+--INSERT INTO CH_PARAMETER 
+--	(ParaName, ParaValue, ParaDesc) VALUES 
+--	('Conversion_rate_e_to_$', '1.2', 'Used on Price List report')
+--GO
+--INSERT INTO CH_PARAMETER 
+--	(ParaName, ParaValue, ParaDesc) VALUES 
+--	('COMMISSION(10%)', '10', 'Used on Price List report')
+--GO
+--INSERT INTO CH_PARAMETER 
+--	(ParaName, ParaValue, ParaDesc) VALUES 
+--	('GRANDTOTALConversion(/0.9)', '0.9', 'Used on Price List report')
+--GO
 -----------------------------
 --INSERT INTO Product (
 --	Fixture_Name,

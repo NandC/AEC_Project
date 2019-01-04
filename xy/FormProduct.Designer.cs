@@ -62,10 +62,10 @@
             reportDataSource1.Value = this.GetProductsBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "xy.ReportProduct.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(12, 67);
+            this.reportViewer1.Location = new System.Drawing.Point(30, 67);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1948, 1090);
+            this.reportViewer1.Size = new System.Drawing.Size(2179, 1400);
             this.reportViewer1.TabIndex = 0;
             this.reportViewer1.ZoomPercent = 80;
             this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
@@ -128,7 +128,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1924, 1036);
+            this.ClientSize = new System.Drawing.Size(2308, 1346);
             this.Controls.Add(this.labelSubCat);
             this.Controls.Add(this.labelCat);
             this.Controls.Add(this.comboBoxSubCat);
