@@ -1,23 +1,25 @@
 
-CREATE TABLE CH_PARAMETER (
-	Id INT IDENTITY (1,1) NOT NULL PRIMARY KEY,
-	ParaName  VARCHAR(255) NOT NULL,
-	ParaValue VARCHAR(255) NOT NULL,
-	ParaDesc  VARCHAR(255) NOT NULL,
-	CONSTRAINT uK_ParaName UNIQUE(ParaName)
-	 )
+--CREATE TABLE CH_PARAMETER (
+--	Id INT IDENTITY (1,1) NOT NULL PRIMARY KEY,
+--	ParaName  VARCHAR(255) NOT NULL,
+--	ParaValue VARCHAR(255) NOT NULL,
+--	ParaDesc  VARCHAR(255) NOT NULL,
+--	CONSTRAINT uK_ParaName UNIQUE(ParaName)
+--	 )
   
 --ALTER TABLE Product ADD CONSTRAINT PK_iD 
 --  PRIMARY KEY (Id) 
 
-ALTER TABLE [Product] ADD CONSTRAINT fk_SubCategory 
-   FOREIGN KEY (Name) REFERENCES SubCategory (SubCategory)
+ALTER TABLE [Product] DROP COLUMN Category
 
-select distinct name from product 
-where name not in (
-SELECT  [SubCategory]
-FROM [AEC_Illumination].[dbo].[SubCategory]
-)
+--ALTER TABLE [Product] ADD CONSTRAINT fk_SubCategory 
+--   FOREIGN KEY (Name) REFERENCES SubCategory (SubCategory)
+
+--select distinct name from product 
+--where name not in (
+--SELECT  [SubCategory]
+--FROM [AEC_Illumination].[dbo].[SubCategory]
+--)
 
 --DELETE [Product] WHERE NAME IS NULL
 --   STU-M 4.700-1M CL.I AND   STU-S 4.700-1M CL.I

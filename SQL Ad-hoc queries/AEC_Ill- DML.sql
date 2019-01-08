@@ -1,4 +1,41 @@
 
+--- UPDATE INVALID SUB-CATEGORY ---------------
+--UPDATE P
+--SET P.Name = R.[SubCategory]
+--FROM Product P, [R_INVLD_SUBCAT$] R
+--WHERE P.Name = R.[Invalid_SubCategory]
+
+--UPDATE [R_INVLD_SUBCAT$]
+--SET SubCategory = 'GALILEO 2 2.0'
+--WHERE Invalid_SubCategory IN ('Galileo 2 2.0 IN')
+
+--UPDATE [R_INVLD_SUBCAT$]
+--SET SubCategory = 'GALILEO 1'
+--WHERE Invalid_SubCategory IN ('Galileo 1 IN')
+
+--UPDATE B SET B.SubCategory = A.[Valid Values]
+--FROM [AEC_Illumination].[dbo].[Mapping2$] A, [R_INVLD_SUBCAT$] B
+--WHERE B.SubCategory IS NULL
+--	  AND B.Invalid_SubCategory = A.[Invaliad Values]
+
+--SELECT B.Invalid_SubCategory, B.SubCategory, A.[Invaliad Values], A.[Valid Values]
+--FROM [AEC_Illumination].[dbo].[Mapping2$] A, [R_INVLD_SUBCAT$] B
+--WHERE B.SubCategory IS NULL
+--	  AND B.Invalid_SubCategory = A.[Invaliad Values]
+
+--UPDATE B SET B.SubCategory = A.SubCategory
+--FROM [AEC_Illumination].[dbo].[SubCategory] A, [R_INVLD_SUBCAT$] B
+--WHERE B.Invalid_SubCategory LIKE ( CONCAT('%', CONCAT(A.SubCategory, '%')) )
+--	  OR A.SubCategory LIKE ( CONCAT('%', CONCAT(B.Invalid_SubCategory, '%')) )
+
+--SELECT * 
+--FROM [AEC_Illumination].[dbo].[SubCategory] A, [R_INVLD_SUBCAT$] B
+--WHERE A.SubCategory LIKE ( CONCAT('%', CONCAT(B.Invalid_SubCategory, '%')) )
+
+--SELECT * 
+--FROM [AEC_Illumination].[dbo].[SubCategory] A, [R_INVLD_SUBCAT$] B
+--WHERE B.Invalid_SubCategory LIKE ( CONCAT('%', CONCAT(A.SubCategory, '%')) )
+
 --INSERT INTO CH_PARAMETER 
 --	(ParaName, ParaValue, ParaDesc) VALUES 
 --	('Conversion_rate_e_to_$', '1.2', 'Used on Price List report')
