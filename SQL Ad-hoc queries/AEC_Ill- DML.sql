@@ -1,4 +1,42 @@
 
+
+---
+--INSERT INTO [dbo].[AEC_PARAMETER] 
+--([ParaName],           [ParaValue],[ParaValue2], [ParaDesc]) VALUES
+--('Bulk Discount less', 55,          350,         '< 350 PCS IN ORDER')
+
+--INSERT INTO [dbo].[AEC_PARAMETER] 
+--([ParaName],           [ParaValue],[ParaValue2], [ParaDesc]) VALUES
+--('Bulk Discount more', 60,          350,         '> 350PCS IN ORDER')
+---
+--- for each SubCat update Additional Charges 5 columns -------------
+--DECLARE @SubCategory VARCHAR(255)
+
+--DECLARE db_cursor CURSOR FAST_FORWARD FOR
+--SELECT SubCategory FROM [SubCategory]
+
+--OPEN db_cursor  
+--FETCH NEXT FROM db_cursor INTO @SubCategory  
+
+--WHILE @@FETCH_STATUS = 0  
+--BEGIN  
+
+--	UPDATE SubCategory 
+--	SET 
+--		DutiesPecent = 2,
+--		DocumentsMn  = 30,
+--		FreightMn = 120,
+--		--DiscountMarkupPecent
+--		ConversionMultiplier = 22	
+--	WHERE
+--		SubCategory = @SubCategory
+			
+--      FETCH NEXT FROM db_cursor INTO @SubCategory 
+--END 
+
+--CLOSE db_cursor  
+--DEALLOCATE db_cursor
+
 --- UPDATE INVALID SUB-CATEGORY ---------------
 --UPDATE P
 --SET P.Name = R.[SubCategory]
