@@ -17,6 +17,7 @@ namespace xy
         public MDIParentAEC()
         {
             InitializeComponent();
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void ShowNewForm(object sender, EventArgs e)
@@ -25,6 +26,34 @@ namespace xy
             childForm.MdiParent = this;
             childForm.Text = "Window " + childFormNumber++;
             childForm.Show();
+        }
+
+        private void MDIParentAEC_Load(object sender, EventArgs e)
+        {
+
+            FormProduct newMDIChild = new FormProduct();
+            newMDIChild.MdiParent = this;
+            newMDIChild.Show();
+
+        }
+
+        private void productListToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormProduct newMDIChild = new FormProduct();
+            newMDIChild.MdiParent = this;
+            newMDIChild.Show();
+        }
+
+        //private void productsListToolStripMenuItem_Click(object sender, EventArgs e)
+        //{
+        //    FormProduct newMDIChild = new FormProduct();
+        //    newMDIChild.MdiParent = this;
+        //    newMDIChild.Show();
+        //}
+
+        private void priceListToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void OpenFile(object sender, EventArgs e)
@@ -103,5 +132,6 @@ namespace xy
                 childForm.Close();
             }
         }
+
     }
 }

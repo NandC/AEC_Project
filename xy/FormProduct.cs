@@ -15,6 +15,7 @@ namespace xy
         public FormProduct()
         {
             InitializeComponent();
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void FormProduct_Load(object sender, EventArgs e)

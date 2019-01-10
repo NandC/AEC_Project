@@ -16,7 +16,7 @@ namespace xy
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormProduct());
+            Application.Run(new MDIParentAEC());
         }
     }
 }
