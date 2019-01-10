@@ -33,6 +33,7 @@
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.electricalProductsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productsListToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.productListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fileMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -86,7 +87,6 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.productListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -125,6 +125,13 @@
             // 
             this.productsListToolStripMenuItem1.Name = "productsListToolStripMenuItem1";
             this.productsListToolStripMenuItem1.Size = new System.Drawing.Size(288, 34);
+            // 
+            // productListToolStripMenuItem
+            // 
+            this.productListToolStripMenuItem.Name = "productListToolStripMenuItem";
+            this.productListToolStripMenuItem.Size = new System.Drawing.Size(288, 34);
+            this.productListToolStripMenuItem.Text = "Product List";
+            this.productListToolStripMenuItem.Click += new System.EventHandler(this.productListToolStripMenuItem_Click);
             // 
             // fileMenu
             // 
@@ -450,7 +457,11 @@
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(267, 34);
             this.aboutToolStripMenuItem.Text = "&About ... ...";
             // 
-
+            // productsListToolStripMenuItem
+            // 
+            this.productsListToolStripMenuItem.Name = "productsListToolStripMenuItem";
+            this.productsListToolStripMenuItem.Size = new System.Drawing.Size(12, 34);
+            // 
             // priceListToolStripMenuItem
             // 
             this.priceListToolStripMenuItem.Name = "priceListToolStripMenuItem";
@@ -561,13 +572,6 @@
             this.toolStripStatusLabel.Size = new System.Drawing.Size(69, 30);
             this.toolStripStatusLabel.Text = "Status";
             // 
-            // productListToolStripMenuItem
-            // 
-            this.productListToolStripMenuItem.Name = "productListToolStripMenuItem";
-            this.productListToolStripMenuItem.Size = new System.Drawing.Size(288, 34);
-            this.productListToolStripMenuItem.Text = "Product List";
-            this.productListToolStripMenuItem.Click += new System.EventHandler(this.productListToolStripMenuItem_Click);
-            // 
             // MDIParentAEC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
@@ -581,6 +585,7 @@
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "MDIParentAEC";
             this.Text = "AEC Products And Price";
+            this.Load += new System.EventHandler(this.ShowNewForm);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.toolStrip.ResumeLayout(false);

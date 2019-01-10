@@ -22,10 +22,14 @@ namespace xy
 
         private void ShowNewForm(object sender, EventArgs e)
         {
-            Form childForm = new Form();
-            childForm.MdiParent = this;
-            childForm.Text = "Window " + childFormNumber++;
-            childForm.Show();
+            FormProduct newMDIChild = new FormProduct();
+            newMDIChild.MdiParent = this;
+            newMDIChild.Show();
+
+            //Form childForm = new Form();
+            //childForm.MdiParent = this;
+            //childForm.Text = "Window " + childFormNumber++;
+            //childForm.Show();
         }
 
         private void MDIParentAEC_Load(object sender, EventArgs e)
