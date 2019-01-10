@@ -1,6 +1,7 @@
 
 --ALTER TABLE [AEC_PARAMETER] ADD ParaValue2 VARCHAR(255)
 --
+--ALTER TABLE [dbo].[SubCategory] DROP COLUMN ExtraChargePecent 
 --ALTER TABLE [dbo].[SubCategory] ADD DutiesPecent SMALLINT
 --ALTER TABLE [dbo].[SubCategory]  ADD DocumentsMn MONEY
 --ALTER TABLE [dbo].[SubCategory]  ADD FreightMn MONEY
@@ -14,6 +15,7 @@
 --ALTER TABLE [dbo].[SubCategoryOptions]  ADD DiscountMarkupPecent SMALLINT
 --ALTER TABLE [dbo].[SubCategoryOptions]  ADD ConversionMultiplier SMALLINT
 
+--ALTER TABLE [dbo].SubCategoryOptions ADD ExtraChargePecent SMALLINT
 --ALTER TABLE [dbo].[SubCategoryOptions]  
 -- DROP COLUMN Group_mA
 

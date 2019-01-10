@@ -1,5 +1,9 @@
+
+--UPDATE [SubCategoryOptions] SET ExtraChargePecent = 3
+--WHERE Price IS NULL AND Name LIKE '%EXTRA CHARGE%'
+
 --- DISCOUNT --------------
-UPDATE A   -- (73 rows affected)
+--UPDATE A   -- (73 rows affected)
 --SET A.DiscountMultiplier = R.[Percent]
 --FROM [x_Discount$] R, SubCategory A 
 --WHERE R.SubCategory = A.SubCategory
