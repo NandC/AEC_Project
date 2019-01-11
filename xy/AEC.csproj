@@ -90,6 +90,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AEC_IlluminationDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="AEC_IlluminationDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AEC_IlluminationDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AEC_IlluminationDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AEC_IlluminationDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +111,12 @@
     </Compile>
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPriceList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPriceList.Designer.cs">
+      <DependentUpon>FormPriceList.cs</DependentUpon>
     </Compile>
     <Compile Include="FormProduct.cs">
       <SubType>Form</SubType>
@@ -123,6 +139,9 @@
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormPriceList.resx">
+      <DependentUpon>FormPriceList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormProduct.resx">
       <DependentUpon>FormProduct.cs</DependentUpon>
     </EmbeddedResource>
@@ -140,6 +159,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="ReportPriceList.rdlc" />
     <EmbeddedResource Include="ReportProduct.rdlc" />
     <None Include="AECDataSet1.xsc">
       <DependentUpon>AECDataSet1.xsd</DependentUpon>
@@ -184,6 +204,28 @@
     </None>
     <None Include="AEC_IlluminationDataSet.xss">
       <DependentUpon>AEC_IlluminationDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AEC_IlluminationDataSet1.xsc">
+      <DependentUpon>AEC_IlluminationDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="AEC_IlluminationDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AEC_IlluminationDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AEC_IlluminationDataSet1.xss">
+      <DependentUpon>AEC_IlluminationDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="AEC_IlluminationDataSet2.xsc">
+      <DependentUpon>AEC_IlluminationDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="AEC_IlluminationDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AEC_IlluminationDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AEC_IlluminationDataSet2.xss">
+      <DependentUpon>AEC_IlluminationDataSet2.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

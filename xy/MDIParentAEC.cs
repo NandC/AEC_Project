@@ -48,6 +48,13 @@ namespace xy
             newMDIChild.Show();
         }
 
+        private void priceListToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FormPriceList newMDIChild = new FormPriceList();
+            newMDIChild.MdiParent = this;
+            newMDIChild.Show();
+        }
+
         //private void productsListToolStripMenuItem_Click(object sender, EventArgs e)
         //{
         //    FormProduct newMDIChild = new FormProduct();
@@ -136,6 +143,7 @@ namespace xy
                 childForm.Close();
             }
         }
+
 
     }
 }

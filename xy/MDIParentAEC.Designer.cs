@@ -87,6 +87,7 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.priceListToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -116,7 +117,8 @@
             // 
             this.electricalProductsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.productsListToolStripMenuItem1,
-            this.productListToolStripMenuItem});
+            this.productListToolStripMenuItem,
+            this.priceListToolStripMenuItem1});
             this.electricalProductsToolStripMenuItem.Name = "electricalProductsToolStripMenuItem";
             this.electricalProductsToolStripMenuItem.Size = new System.Drawing.Size(194, 34);
             this.electricalProductsToolStripMenuItem.Text = "Electrical Products";
@@ -572,6 +574,13 @@
             this.toolStripStatusLabel.Size = new System.Drawing.Size(69, 30);
             this.toolStripStatusLabel.Text = "Status";
             // 
+            // priceListToolStripMenuItem1
+            // 
+            this.priceListToolStripMenuItem1.Name = "priceListToolStripMenuItem1";
+            this.priceListToolStripMenuItem1.Size = new System.Drawing.Size(288, 34);
+            this.priceListToolStripMenuItem1.Text = "Price List";
+            this.priceListToolStripMenuItem1.Click += new System.EventHandler(this.priceListToolStripMenuItem1_Click);
+            // 
             // MDIParentAEC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
@@ -656,6 +665,7 @@
         private System.Windows.Forms.ToolStripMenuItem productsListToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem priceListToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem productListToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem priceListToolStripMenuItem1;
     }
 }
 
