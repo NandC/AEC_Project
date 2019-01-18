@@ -605,7 +605,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -954,6 +953,7 @@
       <Border>
         <Style>Solid</Style>
       </Border>
+      <BackgroundColor>White</BackgroundColor>
     </Style>
   </Body>
   <Width>7.72619in</Width>

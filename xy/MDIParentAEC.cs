@@ -22,7 +22,8 @@ namespace xy
 
         private void ShowNewForm(object sender, EventArgs e)
         {
-            FormProduct newMDIChild = new FormProduct();
+            //FormProduct newMDIChild = new FormProduct();
+            FormPriceList newMDIChild = new FormPriceList();
             newMDIChild.MdiParent = this;
             newMDIChild.Show();
 
@@ -35,7 +36,8 @@ namespace xy
         private void MDIParentAEC_Load(object sender, EventArgs e)
         {
 
-            FormProduct newMDIChild = new FormProduct();
+            //FormProduct newMDIChild = new FormProduct();
+            FormPriceList newMDIChild = new FormPriceList();
             newMDIChild.MdiParent = this;
             newMDIChild.Show();
 

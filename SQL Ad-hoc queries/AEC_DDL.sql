@@ -1,4 +1,40 @@
 
+
+
+
+--DROP TABLE dbo.Product_Mech
+--GO
+
+--CREATE TABLE dbo.Product_Mech(
+--	[Id] [int] IDENTITY(1,1) NOT NULL PRIMARY KEY,
+--	[SubCategory] [nvarchar](255) NULL FOREIGN KEY(SubCategory) REFERENCES [dbo].[SubCategory] ([SubCategory]),
+--	CODE nvarchar(255) NULL,
+--	MODEL nvarchar(255) NULL,
+--	TYPE nvarchar(255) NULL,
+--	HEIGHT_OUT_OF_GROUND float NULL,
+--	TOTAL_HEIGHT float NULL,
+--	IN_GROUNDING_SECTION float NULL,
+--	BASE float NULL,
+--	POSTTOP0 float NULL,
+--	WALL_THICKNESS float NULL,
+--	MATERIAL nvarchar(255) NULL,
+--	PRICE  float NULL,
+--	[CreatedOn] [datetime] NOT NULL,
+--	[CreatedBy] [nvarchar](50) NOT NULL,
+--	[UpdatedOn] [datetime] NULL,
+--	[Updatedby] [nvarchar](50) NULL,
+--	[row_version] [timestamp] NOT NULL
+--)
+--GO
+
+--ALTER TABLE [dbo].Product_Mech  WITH CHECK ADD  CONSTRAINT [fk_PM_SubCategory] FOREIGN KEY(SubCategory)
+--REFERENCES [dbo].[SubCategory] ([SubCategory])
+--GO
+
+--ALTER TABLE [dbo].Product_Mech CHECK CONSTRAINT [fk_PM_SubCategory]
+--GO
+
+
 --ALTER TABLE [AEC_PARAMETER] ADD ParaValue2 VARCHAR(255)
 --
 --ALTER TABLE [dbo].[SubCategory] DROP COLUMN ExtraChargePecent 
