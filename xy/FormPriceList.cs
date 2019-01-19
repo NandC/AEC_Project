@@ -36,7 +36,7 @@ namespace xy
 
             // TODO: This line of code loads data into the 'AEC_IlluminationDataSet1.ProductPriceList' table. You can move, or remove it, as needed.
             
-            this.ProductPriceListTableAdapter.Fill(this.AEC_IlluminationDataSet2.ProductPriceList, "", "", "", 0, "", "");
+            //this.ProductPriceListTableAdapter.Fill(this.AEC_IlluminationDataSet2.ProductPriceList, "", "", "", 0, "", "");
 
             this.reportViewer1.RefreshReport();
             this.reportViewer1.RefreshReport();

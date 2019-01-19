@@ -34,6 +34,7 @@
             this.electricalProductsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productsListToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.productListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.priceListToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.fileMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -74,6 +75,8 @@
             this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productsListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mechanicalProductsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mechanicalProductsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.priceListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
             this.newToolStripButton = new System.Windows.Forms.ToolStripButton();
@@ -87,7 +90,6 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.priceListToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -104,7 +106,8 @@
             this.toolsMenu,
             this.windowsMenu,
             this.helpMenu,
-            this.productsListToolStripMenuItem});
+            this.productsListToolStripMenuItem,
+            this.mechanicalProductsToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.MdiWindowListItem = this.windowsMenu;
             this.menuStrip.Name = "menuStrip";
@@ -126,14 +129,21 @@
             // productsListToolStripMenuItem1
             // 
             this.productsListToolStripMenuItem1.Name = "productsListToolStripMenuItem1";
-            this.productsListToolStripMenuItem1.Size = new System.Drawing.Size(288, 34);
+            this.productsListToolStripMenuItem1.Size = new System.Drawing.Size(213, 34);
             // 
             // productListToolStripMenuItem
             // 
             this.productListToolStripMenuItem.Name = "productListToolStripMenuItem";
-            this.productListToolStripMenuItem.Size = new System.Drawing.Size(288, 34);
+            this.productListToolStripMenuItem.Size = new System.Drawing.Size(213, 34);
             this.productListToolStripMenuItem.Text = "Product List";
             this.productListToolStripMenuItem.Click += new System.EventHandler(this.productListToolStripMenuItem_Click);
+            // 
+            // priceListToolStripMenuItem1
+            // 
+            this.priceListToolStripMenuItem1.Name = "priceListToolStripMenuItem1";
+            this.priceListToolStripMenuItem1.Size = new System.Drawing.Size(213, 34);
+            this.priceListToolStripMenuItem1.Text = "Price List";
+            this.priceListToolStripMenuItem1.Click += new System.EventHandler(this.priceListToolStripMenuItem1_Click);
             // 
             // fileMenu
             // 
@@ -464,6 +474,21 @@
             this.productsListToolStripMenuItem.Name = "productsListToolStripMenuItem";
             this.productsListToolStripMenuItem.Size = new System.Drawing.Size(12, 34);
             // 
+            // mechanicalProductsToolStripMenuItem
+            // 
+            this.mechanicalProductsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mechanicalProductsToolStripMenuItem1});
+            this.mechanicalProductsToolStripMenuItem.Name = "mechanicalProductsToolStripMenuItem";
+            this.mechanicalProductsToolStripMenuItem.Size = new System.Drawing.Size(218, 34);
+            this.mechanicalProductsToolStripMenuItem.Text = "Mechanical Products";
+            // 
+            // mechanicalProductsToolStripMenuItem1
+            // 
+            this.mechanicalProductsToolStripMenuItem1.Name = "mechanicalProductsToolStripMenuItem1";
+            this.mechanicalProductsToolStripMenuItem1.Size = new System.Drawing.Size(297, 34);
+            this.mechanicalProductsToolStripMenuItem1.Text = "Mechanical Products";
+            this.mechanicalProductsToolStripMenuItem1.Click += new System.EventHandler(this.mechanicalProductsToolStripMenuItem1_Click);
+            // 
             // priceListToolStripMenuItem
             // 
             this.priceListToolStripMenuItem.Name = "priceListToolStripMenuItem";
@@ -574,13 +599,6 @@
             this.toolStripStatusLabel.Size = new System.Drawing.Size(69, 30);
             this.toolStripStatusLabel.Text = "Status";
             // 
-            // priceListToolStripMenuItem1
-            // 
-            this.priceListToolStripMenuItem1.Name = "priceListToolStripMenuItem1";
-            this.priceListToolStripMenuItem1.Size = new System.Drawing.Size(288, 34);
-            this.priceListToolStripMenuItem1.Text = "Price List";
-            this.priceListToolStripMenuItem1.Click += new System.EventHandler(this.priceListToolStripMenuItem1_Click);
-            // 
             // MDIParentAEC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
@@ -593,7 +611,7 @@
             this.MainMenuStrip = this.menuStrip;
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "MDIParentAEC";
-            this.Text = "AEC Products And Price";
+            this.Text = "AEC Products And Prices";
             this.Load += new System.EventHandler(this.ShowNewForm);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
@@ -666,6 +684,8 @@
         private System.Windows.Forms.ToolStripMenuItem priceListToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem productListToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem priceListToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem mechanicalProductsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mechanicalProductsToolStripMenuItem1;
     }
 }
 

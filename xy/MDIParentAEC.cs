@@ -50,6 +50,13 @@ namespace xy
             newMDIChild.Show();
         }
 
+        private void mechanicalProductsToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FormProdMech newMDIChild = new FormProdMech();
+            newMDIChild.MdiParent = this;
+            newMDIChild.Show();
+        }
+
         private void priceListToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             FormPriceList newMDIChild = new FormPriceList();

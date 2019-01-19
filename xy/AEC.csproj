@@ -85,6 +85,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AECDataSetModel.xsd</DependentUpon>
     </Compile>
+    <Compile Include="AEC_IllumDataSetPolesList.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AEC_IllumDataSetPolesList.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AEC_IllumDataSetProdMech.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AEC_IllumDataSetProdMech.xsd</DependentUpon>
+    </Compile>
     <Compile Include="AEC_IlluminationDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -118,6 +128,12 @@
     <Compile Include="FormPriceList.Designer.cs">
       <DependentUpon>FormPriceList.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormProdMech.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProdMech.Designer.cs">
+      <DependentUpon>FormProdMech.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +158,9 @@
     <EmbeddedResource Include="FormPriceList.resx">
       <DependentUpon>FormPriceList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormProdMech.resx">
+      <DependentUpon>FormProdMech.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormProduct.resx">
       <DependentUpon>FormProduct.cs</DependentUpon>
     </EmbeddedResource>
@@ -160,6 +179,7 @@
     </Compile>
     <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="ReportPriceList.rdlc" />
+    <EmbeddedResource Include="ReportProdMech.rdlc" />
     <EmbeddedResource Include="ReportProduct.rdlc" />
     <None Include="AECDataSet1.xsc">
       <DependentUpon>AECDataSet1.xsd</DependentUpon>
@@ -193,6 +213,28 @@
     </None>
     <None Include="AECDataSetModel.xss">
       <DependentUpon>AECDataSetModel.xsd</DependentUpon>
+    </None>
+    <None Include="AEC_IllumDataSetPolesList.xsc">
+      <DependentUpon>AEC_IllumDataSetPolesList.xsd</DependentUpon>
+    </None>
+    <None Include="AEC_IllumDataSetPolesList.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AEC_IllumDataSetPolesList.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AEC_IllumDataSetPolesList.xss">
+      <DependentUpon>AEC_IllumDataSetPolesList.xsd</DependentUpon>
+    </None>
+    <None Include="AEC_IllumDataSetProdMech.xsc">
+      <DependentUpon>AEC_IllumDataSetProdMech.xsd</DependentUpon>
+    </None>
+    <None Include="AEC_IllumDataSetProdMech.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AEC_IllumDataSetProdMech.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AEC_IllumDataSetProdMech.xss">
+      <DependentUpon>AEC_IllumDataSetProdMech.xsd</DependentUpon>
     </None>
     <None Include="AEC_IlluminationDataSet.xsc">
       <DependentUpon>AEC_IlluminationDataSet.xsd</DependentUpon>
