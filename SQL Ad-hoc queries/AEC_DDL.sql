@@ -36,7 +36,8 @@
 
 
 --ALTER TABLE [AEC_PARAMETER] ADD ParaValue2 VARCHAR(255)
---
+
+-- ALTER TABLE [dbo].[SubCategory]  ADD MarkupMultiplier SMALLINT
 --ALTER TABLE [dbo].[SubCategory] DROP COLUMN ExtraChargePecent 
 --ALTER TABLE [dbo].[SubCategory] ADD DutiesPecent SMALLINT
 --ALTER TABLE [dbo].[SubCategory]  ADD DocumentsMn MONEY

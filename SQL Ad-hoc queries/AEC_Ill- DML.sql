@@ -1,5 +1,12 @@
 
+--UPDATE SubCategory 
+--SET MarkupMultiplier = 
+--	CASE Category
+--		WHEN 'POLES' THEN 0.5
+--		ELSE 0.52
+--	END
 
+---------------
 --INSERT INTO 
 --	dbo.Product_Mech
 --SELECT 
